@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yibuyisheng/nodejs-lib.git"
+  },
+  "author": "yibuyisheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yibuyisheng/nodejs-lib/issues"
+  },
+  "homepage": "https://github.com/yibuyisheng/nodejs-lib",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
