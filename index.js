@@ -3,5 +3,6 @@ var common = require('./src/common.js');
 
 module.exports = {
     file: file,
-    executeGeneratorFn: common.executeGeneratorFn
+    executeGeneratorFn: common.executeGeneratorFn,
+    extend: common.extend
 };
