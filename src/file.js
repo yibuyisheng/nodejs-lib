@@ -1,27 +1,6 @@
 var path = require('path');
 var fs = require('fs');
-
-function executeGeneratorFn(genFn, callback) {
-    var iterator = genFn();
-
-    function execute(nextValue) {
-        if (!nextValue.done) {
-            nextValue.value(next);
-        } else {
-            callback instanceof Function && callback();
-        }
-    }
-
-    function next() {
-        try {
-            execute(iterator.next(arguments));
-        } catch (e) {
-            callback(e);
-        }
-    }
-
-    next();
-}
+var executeGeneratorFn = require('./common.js').executeGeneratorFn;
 
 function throwError(result) {
     if (result && result[0]) throw result[0];
