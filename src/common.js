@@ -5,7 +5,7 @@ function executeGeneratorFn(genFn, callback) {
         if (!nextValue.done) {
             nextValue.value(next);
         } else {
-            callback instanceof Function && callback();
+            callback instanceof Function && callback(null, nextValue.value);
         }
     }
 
@@ -13,7 +13,7 @@ function executeGeneratorFn(genFn, callback) {
         try {
             execute(iterator.next(arguments));
         } catch (e) {
-            callback(e);
+            callback instanceof Function && callback(e);
         }
     }
 
