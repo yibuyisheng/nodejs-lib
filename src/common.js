@@ -80,14 +80,14 @@ function dateGetter(fn, dt) {
     return fn.call(dt);
 }
 var strMap = {
-    yyyy: bind(dateGetter, Date.prototype.getFullYear),
+    yyyy: dateGetter.bind(null, Date.prototype.getFullYear),
     MM: function(dt) {
         return dateGetter(Date.prototype.getMonth, dt) + 1;
     },
-    dd: bind(dateGetter, Date.prototype.getDate),
-    HH: bind(dateGetter, Date.prototype.getHours),
-    mm: bind(dateGetter, Date.prototype.getMinutes),
-    ss: bind(dateGetter, Date.prototype.getSeconds)
+    dd: dateGetter.bind(null, Date.prototype.getDate),
+    HH: dateGetter.bind(null, Date.prototype.getHours),
+    mm: dateGetter.bind(null, Date.prototype.getMinutes),
+    ss: dateGetter.bind(null, Date.prototype.getSeconds)
 };
 
 function dateFormat(dt, formatStr) {
