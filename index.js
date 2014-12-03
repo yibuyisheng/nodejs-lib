@@ -4,5 +4,6 @@ var common = require('./src/common.js');
 module.exports = {
     file: file,
     executeGeneratorFn: common.executeGeneratorFn,
-    extend: common.extend
+    extend: common.extend,
+    format: common.format
 };
