@@ -5,5 +5,6 @@ module.exports = {
     file: file,
     executeGeneratorFn: common.executeGeneratorFn,
     extend: common.extend,
-    format: common.format
+    format: common.format,
+    dateFormat: common.dateFormat
 };

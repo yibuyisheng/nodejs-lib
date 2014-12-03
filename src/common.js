@@ -112,3 +112,4 @@ function format(str) {
 exports.executeGeneratorFn = executeGeneratorFn;
 exports.extend = extend;
 exports.format = format;
+exports.dateFormat = dateFormat;
